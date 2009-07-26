@@ -1,33 +1,28 @@
+%define upstream_name    B-Debug
+%define upstream_version 1.11
 
-%define realname   B-Debug
-%define version    1.11
-%define release    %mkrel 1
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
 
-Name:       perl-%{realname}
-Version:    %{version}
-Release:    %{release}
-License:    GPL or Artistic
-Group:      Development/Perl
 Summary:    Walk Perl syntax tree, printing debug info about ops
-Source:     http://www.cpan.org/modules/by-module/B/%{realname}-%{version}.tar.gz
-Url:        http://search.cpan.org/dist/%{realname}
-BuildRoot:  %{_tmppath}/%{name}-%{version}-%{release}-buildroot
-BuildRequires: perl-devel
+License:    GPL+ or Artistic
+Group:      Development/Perl
+Url:        http://search.cpan.org/dist/%{upstream_name}
+Source0:    http://www.cpan.org/modules/by-module/B/%{upstream_name}-%{upstream_version}.tar.gz
+
 BuildRequires: perl(B)
 BuildRequires: perl(Test::More)
-
-BuildArch: noarch
+BuildRequires: perl-devel
+BuildRoot:  %{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 See _ext/B/README_ and the newer the B::Concise manpage, the B::Terse
 manpage.
 
 
-
-
-
 %prep
-%setup -q -n %{realname}-%{version} 
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
@@ -48,5 +43,4 @@ rm -rf %buildroot
 %doc Changes README
 %{_mandir}/man3/*
 %perl_vendorlib/*
-
 
