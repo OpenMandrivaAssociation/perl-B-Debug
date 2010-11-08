@@ -1,9 +1,9 @@
 %define upstream_name    B-Debug
-%define upstream_version 1.12
+%define upstream_version 1.16
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
-Release:    %mkrel 2
+Release:    %mkrel 1
 
 Summary:    Walk Perl syntax tree, printing debug info about ops
 License:    GPL+ or Artistic
