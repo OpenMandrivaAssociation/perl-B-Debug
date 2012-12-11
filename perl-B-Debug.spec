@@ -44,3 +44,36 @@ rm -rf %buildroot
 %{_mandir}/man3/*
 %perl_vendorlib/*
 
+
+
+%changelog
+* Sat May 28 2011 Funda Wang <fwang@mandriva.org> 1.160.0-2mdv2011.0
++ Revision: 680509
+- mass rebuild
+
+* Mon Nov 08 2010 Guillaume Rousse <guillomovitch@mandriva.org> 1.160.0-1mdv2011.0
++ Revision: 595074
+- update to new version 1.16
+
+* Tue Jul 20 2010 Jérôme Quelin <jquelin@mandriva.org> 1.120.0-2mdv2011.0
++ Revision: 555683
+- rebuild
+
+* Thu Feb 11 2010 Jérôme Quelin <jquelin@mandriva.org> 1.120.0-1mdv2010.1
++ Revision: 504069
+- update to 1.12
+
+* Sun Jul 26 2009 Jérôme Quelin <jquelin@mandriva.org> 1.110.0-1mdv2010.0
++ Revision: 400258
+- remove noarch
+- using %%perl_convert_version
+- fixed license field
+
+* Mon May 11 2009 Jérôme Quelin <jquelin@mandriva.org> 1.11-1mdv2010.0
++ Revision: 374337
+- import perl-B-Debug
+
+
+* Mon May 11 2009 cpan2dist 1.11-1mdv
+- initial mdv release, generated with cpan2dist
+
