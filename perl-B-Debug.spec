@@ -1,15 +1,15 @@
 %define upstream_name    B-Debug
-%define upstream_version 1.16
+%define upstream_version 1.18
 
 Name:       perl-%{upstream_name}
-Version:    %perl_convert_version %{upstream_version}
-Release:    %mkrel 2
+Version:    %perl_convert_version 1.18
+Release:    1
 
 Summary:    Walk Perl syntax tree, printing debug info about ops
 License:    GPL+ or Artistic
 Group:      Development/Perl
 Url:        http://search.cpan.org/dist/%{upstream_name}
-Source0:    http://www.cpan.org/modules/by-module/B/%{upstream_name}-%{upstream_version}.tar.gz
+Source0:    http://www.cpan.org/modules/by-module/B/B-Debug-1.18.tar.gz
 
 BuildRequires: perl(B)
 BuildRequires: perl(Test::More)
@@ -76,4 +76,5 @@ rm -rf %buildroot
 
 * Mon May 11 2009 cpan2dist 1.11-1mdv
 - initial mdv release, generated with cpan2dist
+
 
