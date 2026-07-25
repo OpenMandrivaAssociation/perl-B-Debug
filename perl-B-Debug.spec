@@ -1,15 +1,15 @@
 %define upstream_name    B-Debug
-%define upstream_version 1.16
+%define upstream_version 1.26
 
 Name:       perl-%{upstream_name}
-Version:    %perl_convert_version %{upstream_version}
-Release:    4
+Version:    %{upstream_version}
+Release:    1
 
 Summary:    Walk Perl syntax tree, printing debug info about ops
 License:    GPL+ or Artistic
 Group:      Development/Perl
-Url:        https://search.cpan.org/dist/%{upstream_name}
-Source0:    http://www.cpan.org/modules/by-module/B/%{upstream_name}-%{upstream_version}.tar.gz
+Url:        https://metacpan.org/dist/B-Debug
+Source0:    https://cpan.metacpan.org/authors/id/R/RU/RURBAN/B-Debug-%{upstream_version}.tar.gz
 
 BuildRequires:	make
 BuildRequires: perl(B)
