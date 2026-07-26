@@ -1,15 +1,13 @@
 %define upstream_name    B-Debug
-%define upstream_version 1.26
-
 Name:       perl-%{upstream_name}
-Version:    %{upstream_version}
-Release:    1
+Version:    1.26
+Release:    2
 
 Summary:    Walk Perl syntax tree, printing debug info about ops
 License:    GPL+ or Artistic
 Group:      Development/Perl
 Url:        https://metacpan.org/dist/B-Debug
-Source0:    https://cpan.metacpan.org/authors/id/R/RU/RURBAN/B-Debug-%{upstream_version}.tar.gz
+Source0:    https://cpan.metacpan.org/authors/id/R/RU/RURBAN/B-Debug-%{version}.tar.gz
 
 BuildRequires:	make
 BuildRequires: perl(B)
@@ -23,7 +21,7 @@ manpage.
 
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
@@ -67,8 +65,7 @@ rm -rf %buildroot
 * Sun Jul 26 2009 Jérôme Quelin <jquelin@mandriva.org> 1.110.0-1mdv2010.0
 + Revision: 400258
 - remove noarch
-- using %%perl_convert_version
-- fixed license field
+- using %1.26 fixed license field
 
 * Mon May 11 2009 Jérôme Quelin <jquelin@mandriva.org> 1.11-1mdv2010.0
 + Revision: 374337
